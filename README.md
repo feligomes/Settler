@@ -32,7 +32,9 @@ npm run test
 
 ## Important Considerations
 
-- **Admin Screen**: The app shows a screen similar to what an admin would see, allowing them to see the simulated screens of both Party A and Party B. This was done to showcase the interaction between the parties and how each one updates in a different way. If this was a real application the view of both Party A and B would have been independent. Still the code is reusable as it is and could manage showing only one Party but that would make the testing of the app harder. 
+- **Admin Screen**: The app shows a screen similar to what an admin would see, allowing them to see the simulated screens of both Party A and Party B. This was done to showcase the interaction between the parties and how each one updates in a different way.
+
+- **Screens**: If this was a real application the view of both Party A and B would have been independent. Still the code is reusable as it is and could manage showing only one Party but that would make the testing of the app harder.
   
 - **Real-Time Updates**: Party B receives updates in real time, but Party A needs to select the option to "Refresh" to get the latest info. This follows the requirements of the challenge.
 
