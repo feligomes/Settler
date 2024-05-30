@@ -85,7 +85,7 @@ const PartyA: React.FC = () => {
                 addonBefore={"Offer for image:"}
                 addonAfter="$"
                 aria-label="Offer Amount"
-                value={amount || 0}
+                value={amount}
                 min={0}
                 onChange={setAmount}
               />
