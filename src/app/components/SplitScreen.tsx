@@ -22,13 +22,14 @@ const SplitScreen = () => {
 
   return (
     <Row
-      style={{ height: "100vh", overflow: isLargeScreen ? "hidden" : "auto" }}
+      style={{ height: isLargeScreen ? "100vh" : "auto", overflow: isLargeScreen ? "hidden" : "auto" }}
     >
       <Col
         xs={24}
         md={12}
         style={{
           backgroundColor: "#f0f0f0",
+          height : "100%"
         }}
       >
         <Title style={{ margin: "10px" }} level={4}>
@@ -43,6 +44,7 @@ const SplitScreen = () => {
         md={12}
         style={{
           backgroundColor: "#e0e0e0",
+          height : "100%"
         }}
       >
         <Title style={{ margin: "10px" }} level={4}>

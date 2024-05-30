@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Card, Flex } from "antd";
+import { Button, Card, Flex, Grid } from "antd";
 import React from "react";
 import { Typography } from "antd";
 import { useAppDispatch, useAppSelector } from "@/app/hooks/store";
@@ -10,8 +10,12 @@ import testImage from "../../../public/testImage.webp";
 import Image from "next/image";
 
 const { Text } = Typography;
+const { useBreakpoint } = Grid;
 
 const PartyB: React.FC = () => {
+  const screens = useBreakpoint();
+  const isLargeScreen = screens.md;
+
   const { offer } = useAppSelector((state) => state.offers);
   const dispatch = useAppDispatch();
 
@@ -52,7 +56,7 @@ const PartyB: React.FC = () => {
 
   return (
     <Card
-      style={{ width: 380 }}
+      style={{ width: isLargeScreen ? 400 : "75%" }}
       cover={<Image alt="example" src={testImage} layout="responsive" />}
     >
       <Flex gap={"large"} vertical>
@@ -64,6 +68,7 @@ const PartyB: React.FC = () => {
         {offer?.status !== offerStatus.AGREED && (
           <Flex gap={"small"}>
             <Button
+              disabled={!offer}
               onClick={handleAgree}
               type="primary"
               style={{ width: "100%" }}
@@ -71,6 +76,7 @@ const PartyB: React.FC = () => {
               Agree
             </Button>
             <Button
+              disabled={!offer}
               danger
               onClick={handleDisagree}
               type="primary"

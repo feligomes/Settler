@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Card, Flex, InputNumber, Modal, Typography } from "antd";
+import { Button, Card, Flex, Grid, InputNumber, Modal, Typography } from "antd";
 import React, { useState, useEffect, useRef } from "react";
 import { useAppDispatch, useAppSelector } from "@/app/hooks/store";
 import { setOffer } from "@/app/store/slices/offersSlice";
@@ -9,8 +9,11 @@ import testImage from "../../../public/testImage.webp";
 import Image from "next/image";
 
 const { Text } = Typography;
+const { useBreakpoint } = Grid;
 
 const PartyA: React.FC = () => {
+  const screens = useBreakpoint();
+  const isLargeScreen = screens.md;
   const [amount, setAmount] = useState<number | null>(null);
   const dispatch = useAppDispatch();
   const { offer } = useAppSelector((state) => state.offers);
@@ -28,8 +31,7 @@ const PartyA: React.FC = () => {
 
   const getStatusMessage = (status: offerStatus | undefined) => {
     const statusMessages = {
-      [offerStatus.UNANSWERED]:
-        "Waiting for response to the offer of",
+      [offerStatus.UNANSWERED]: "Waiting for response to the offer of",
       [offerStatus.AGREED]: "Party B agreed to the offer of",
       [offerStatus.DISAGREED]: "Party B did not agree to the offer of",
     };
@@ -72,14 +74,14 @@ const PartyA: React.FC = () => {
   return (
     <>
       <Card
-        style={{width : 380 }}
-        cover={<Image alt="example" src={testImage} layout="responsive"  />}
+        style={{ width: isLargeScreen ? 400 : "75%" }}
+        cover={<Image alt="example" src={testImage} layout="responsive" />}
       >
         <Flex gap="large" vertical>
           {initialOfferStatusRef.current !== offerStatus.AGREED && (
             <>
               <InputNumber
-              addonBefore={"Offer for image:"}
+                addonBefore={"Offer for image:"}
                 addonAfter="$"
                 aria-label="Offer Amount"
                 value={amount || 0}
