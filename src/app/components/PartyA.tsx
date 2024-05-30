@@ -29,6 +29,7 @@ const PartyA: React.FC = () => {
     }
   }, [offer]);
 
+
   const getStatusMessage = (status: offerStatus | undefined) => {
     const statusMessages = {
       [offerStatus.UNANSWERED]: "Waiting for response to the offer of",
