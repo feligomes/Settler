@@ -3,6 +3,14 @@
 
 This is a small app that simulates the settlement between two parties to reach an agreement on a price. It was built as an example of different technologies and based on a technical challenge.
 
+Below are two videos explaining the decisions made during the development. The first video goes over the product, and the second video shows how the code is structured.
+
+### Product explanation :
+[![Watch the video](https://img.youtube.com/vi/wNbMpEN4rS8/0.jpg)](https://www.youtube.com/watch?v=wNbMpEN4rS8)
+
+### Technical explanation :
+[![Watch the video](https://img.youtube.com/vi/-UY5YgVLdbI/0.jpg)](https://www.youtube.com/watch?v=-UY5YgVLdbI)
+
 ## Deployment
 
 The app is deployed on Vercel and can be tested at this URL: [Settlement System](https://settlersystem.vercel.app/)
