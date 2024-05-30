@@ -44,7 +44,7 @@ npm run test
 
 - **Timeframe**: The challenge was completed within 4 hours, so the number of features was limited.
 
--  **Components Library**: Since the job description mentioned Ant Design I went ahead an implemented most of the UI using it. It was my first time using it, have much more experience with Material UI. Again in a real case scenario more components reutilization would have been made and a custom theme or customized library would have been used.  
+-  **Components Library**: Since the job description mentioned Ant Design, I implemented most of the UI using it. It was my first time using Ant Design; I have much more experience with Material UI. In a real scenario, more component reutilization would have been done, and a custom theme or customized library would have been used. 
 
 ## Future Improvements
 
@@ -56,7 +56,9 @@ npm run test
 
 - **Checkout Process**: Implement a checkout process after the price is agreed upon.
 
-- **Components Refactor**: There is a lot of room for improvements in the components, a lot of the code of Party A and party B is similar and with more time I would have tried something more modular and reusable.
+- **Components Refactor**: There is a lot of room for improvement in the components. A lot of the code for Party A and Party B is similar, and with more time, I would have tried something more modular and reusable.
+
+- **Vercel Features**: With more time, I would have taken advantage of the different features Vercel offers, such as Analytics, Logs, and the different performance insights Vercel provides.
 
 
 
